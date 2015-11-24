@@ -10,8 +10,10 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
+
 .footer {
-  position: absolute;
+  /*position: absolute;*/
+  margin-top: 40px;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -37,19 +39,28 @@ a:link {
 }
 
 a:visited{
-    color: #8B008B;
+  color: #8B008B;
 }
 
+a.btn-circle{
+  color: inherit;
+}
+
+a.btn-circle:hover{
+  color: #eee;
+}
+
+
 h1 {
-    font-family: 'Roboto Slab', serif;
-    font-weight: 400;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
 }
 
 h2 {
-    font-family: 'Roboto Slab', serif;
-    font-weight: 400;
-    font-size: 20px;
-    margin-top: 40px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 40px;
 }
 .container {
   width: auto;
@@ -61,3 +72,80 @@ h2 {
   font-style: italic;
 }
 
+/* Header */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(beach.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+
+}
+
+/*Button*/
+.btn-circle {
+  width: 70px;
+  height: 70px;
+  margin-top: 15px;
+  padding: 7px 16px;
+  font-size: 40px;
+  color: white;
+  background: transparent;
+  -webkit-transition: background .3s ease-in-out;
+  -moz-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out;
+  &:hover,
+  &:focus {
+    outline: none;
+    color: white;
+    background: fade(white, 10%);
+  }
+  i.animated {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+  }
+  &:hover {
+    i.animated {
+      -webkit-animation-name: pulse;
+      -moz-animation-name: pulse;
+      -webkit-animation-duration: 1.5s;
+      -moz-animation-duration: 1.5s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
+    }
+  }
+}
+
+
+.ontop{
+ position: absolute;
+ top: 90%;
+ left: 50%;
+ -webkit-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+}
